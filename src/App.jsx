@@ -10,7 +10,7 @@ const App = () => {
   //stateは動的な値を更新する場合に使用する
   const [num, setNum] = useState(0);
   //()かっこ内は初期値
-  const [] = useState(true);
+  const [faceShowFlag, setFaceShowFlag] = useState(true);
   return (
     <>
       {/*外側の{}は、javascriptであることを表し、内側の{}はjavascriptの関数を書く際の{}*/}
@@ -21,7 +21,7 @@ const App = () => {
       <br />
       <button>on/off</button>
       <p>{num}</p>
-      <p>(^o^)</p>
+      {faceShowFlag && <p>(^o^)</p>}
     </>
   );
 };
